@@ -1,5 +1,5 @@
-def tomcatWeb = 'C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps'
-def tomcatBin = 'C:\Program Files\Apache Software Foundation\Tomcat 9.0\bin'
+def tomcatWeb = 'C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\webapps'
+def tomcatBin = 'C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\bin'
 def status = ''
 
 pipeline {
@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Deploying') {
             steps {
-                bat "copy target\blink.war \"${tomcatWeb}\blink.war""
+                bat "copy target\\blink.war \"${tomcatWeb}\\blink.war""
             }
         }
     }
